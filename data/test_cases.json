@@ -1,0 +1,82 @@
+[
+  {
+    "test_id": "TC_APT_EXFILTRATION",
+    "scenario_name": "apt_exfiltration",
+    "description": "Advanced Persistent Threat - Data Exfiltration",
+    "severity": "CRITICAL",
+    "success_criteria": {
+      "detection_time": "< 2 minutes",
+      "must_detect_steps": [
+        1,
+        5
+      ],
+      "expected_actions": "Isolate instance, revoke credentials, block IP, enable S3 versioning"
+    },
+    "evaluation_metrics": {
+      "true_positive_required": true,
+      "false_positive_allowed": false,
+      "response_time_threshold": "30 seconds",
+      "remediation_accuracy": "100%"
+    }
+  },
+  {
+    "test_id": "TC_CRYPTOMINER_DEPLOYMENT",
+    "scenario_name": "cryptominer_deployment",
+    "description": "Cryptocurrency Mining Deployment",
+    "severity": "MEDIUM",
+    "success_criteria": {
+      "detection_time": "< 5 minutes",
+      "must_detect_steps": [
+        1,
+        3
+      ],
+      "expected_actions": "Terminate instances, revoke credentials, review CloudTrail for source"
+    },
+    "evaluation_metrics": {
+      "true_positive_required": true,
+      "false_positive_allowed": false,
+      "response_time_threshold": "30 seconds",
+      "remediation_accuracy": "100%"
+    }
+  },
+  {
+    "test_id": "TC_INSIDER_THREAT",
+    "scenario_name": "insider_threat",
+    "description": "Insider Threat - Data Theft",
+    "severity": "HIGH",
+    "success_criteria": {
+      "detection_time": "< 3 minutes",
+      "must_detect_steps": [
+        1,
+        3
+      ],
+      "expected_actions": "Suspend user, preserve logs, initiate forensic investigation"
+    },
+    "evaluation_metrics": {
+      "true_positive_required": true,
+      "false_positive_allowed": false,
+      "response_time_threshold": "30 seconds",
+      "remediation_accuracy": "100%"
+    }
+  },
+  {
+    "test_id": "TC_RANSOMWARE_PREPARATION",
+    "scenario_name": "ransomware_preparation",
+    "description": "Ransomware Deployment Preparation",
+    "severity": "CRITICAL",
+    "success_criteria": {
+      "detection_time": "< 1 minute",
+      "must_detect_steps": [
+        1,
+        4
+      ],
+      "expected_actions": "Emergency isolation, snapshot all volumes, revoke all credentials"
+    },
+    "evaluation_metrics": {
+      "true_positive_required": true,
+      "false_positive_allowed": false,
+      "response_time_threshold": "30 seconds",
+      "remediation_accuracy": "100%"
+    }
+  }
+]
